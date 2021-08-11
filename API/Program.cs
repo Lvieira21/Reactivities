@@ -18,6 +18,8 @@ namespace API
         {
             var host = CreateHostBuilder(args).Build();
             
+            // Verifica se há o DB criado, e se nao existir, cria o DB
+            #region Criação de DB
             using var scope = host.Services.CreateScope(); 
 
             var services = scope.ServiceProvider;
@@ -33,6 +35,7 @@ namespace API
                 var logger = services.GetRequiredService<ILogger<Program>>();
                 logger.LogError(ex, "Um erro ocorreu durante a migração.");
             }
+            #endregion
 
             await host.RunAsync();
         }
