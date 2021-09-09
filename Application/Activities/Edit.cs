@@ -31,7 +31,7 @@ namespace Application.Activities
 				//Pode ser utilizado AutoMapper ao invés de trocar campo por campo
 				// activity.Title = request.Activity.Title ?? activity.Title;
                 
-                _mapper.Map(request.Activity, activity);
+            _mapper.Map(request.Activity, activity);
 
 				await _context.SaveChangesAsync();
 
