@@ -442,3 +442,6 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+yarn.lock
+API/reactivities.db
+API/reactivities.db
